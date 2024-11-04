@@ -1,0 +1,32 @@
+.hamburguer__menu {
+  display: none;
+}
+
+.nav__menu {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home__btn {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 600;
+  transform: scale(1.1, 1);
+  letter-spacing: -2px;
+  font-family: "Outfit", sans-serif;
+}
+
+.icons__container {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
