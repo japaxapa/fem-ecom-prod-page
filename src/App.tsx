@@ -1,29 +1,17 @@
 import "./App.css";
+import CartModal from "./components/CartModal";
 import NavBar from "./components/NavBar";
+import ProductPage from "./components/ProductPage";
+import { useCart } from "./context/cart.context";
 
 function App() {
+  const { isCartOpen } = useCart();
+
   return (
     <>
       <NavBar />
-
-      <div className="page__content">
-        <div className="product__carousel">
-          only image with arrows / image with choices under
-        </div>
-        <div className="product__container">
-          <div className="product__info">
-            <div className="product__info--text"></div>
-            <div className="product__info--price">
-              <div className="current__value"></div>
-              <div className="original__value"></div>
-            </div>
-          </div>
-          <div className="product__actions">
-            <div className="product__quantity"></div>
-            <div className="cart__btn--add"></div>
-          </div>
-        </div>
-      </div>
+      <ProductPage />
+      {isCartOpen && <CartModal />}
     </>
   );
 }
